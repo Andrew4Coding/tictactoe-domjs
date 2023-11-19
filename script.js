@@ -2,7 +2,6 @@ const listOfButtonArray = Array.from(document.getElementsByClassName('button-to-
 const listOfButton = document.getElementsByClassName('button-to-click')
 
 const listOfRow = document.querySelector('.grid-container')
-const displayPlayer = document.getElementById('display-player')
 
 let isPlayer1 = true
 let clickable = true
@@ -13,7 +12,7 @@ function restartGame(){
         box.style.backgroundColor = 'white'})
     isPlayer1 = true
     clickable = true
-    document.getElementById('message').innerHTML = 'Its Player <b id="displayplayer">X</b> Turn'
+    document.getElementById('message').innerHTML = 'Its <b id="display-player">Player X</b> Turn'
 }
 
 const winningCombos = [
@@ -50,6 +49,7 @@ listOfRow.addEventListener
 ('click', function(e) {
     if (e.target.matches('.button-to-click') && clickable){
         if (e.target.innerText == ""){
+            const displayPlayer = document.getElementById('display-player')
             let playerwin;
             if (isPlayer1){
                 playerwin = 'X'
@@ -87,5 +87,3 @@ listOfRow.addEventListener
         }
     }
 })
-
-
