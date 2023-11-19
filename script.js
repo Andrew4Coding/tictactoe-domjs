@@ -63,7 +63,7 @@ listOfRow.addEventListener
             }
             e.target.innerText = playerwin
             if (checkWin()){
-                document.getElementById('message').innerHTML = 'Player <b id="displayplayer">' + playerwin + '</b> Wins!'
+                document.getElementById('message').innerHTML = 'Player <b id="display-player">' + playerwin + '</b> Wins!'
                 clickable = false
             }
             if (listOfButton[0].innerText != '' &&
@@ -87,3 +87,5 @@ listOfRow.addEventListener
         }
     }
 })
+
+
