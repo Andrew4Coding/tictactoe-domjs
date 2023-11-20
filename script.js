@@ -7,12 +7,7 @@ let isPlayer1 = true
 let clickable = true
 
 function restartGame(){
-    listOfButtonArray.forEach(box => {
-        box.innerText = ''
-        box.style.backgroundColor = 'white'})
-    isPlayer1 = true
-    clickable = true
-    document.getElementById('message').innerHTML = 'Its <b id="display-player">Player X</b> Turn'
+    location.reload()
 }
 
 const winningCombos = [
